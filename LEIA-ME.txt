@@ -1,0 +1,11 @@
+ENCANTO DE NATAL - v10 (tema escuro)
+Abra index.html no navegador.
+
+- Efeito cascata ao rolar: js/script.js (initReveal) + final de css/style.css.
+- Imagens de img/galeria e img/produtos foram ampliadas e levemente afiadas.
+  Fotos originais pequenas (ex.: quarto-natalino.jpg) continuam menos nítidas que as demais.
+
+ATENCAO sobre direitos de imagem:
+- biscoitos-natalinos.jpg veio de uma previa do iStock (recortada para sair a marca d'agua).
+- ceia-em-familia.jpg tem marca d'agua da Getty no canto inferior direito.
+Para uso publico, compre a licenca ou troque por outras fotos.

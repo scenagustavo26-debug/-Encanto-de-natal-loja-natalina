@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Encanto de Natal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-in">
+      <a href="index.html" class="marca">Encanto <b>de Natal</b></a>
+      <nav class="menu" id="nav-menu" aria-label="Principal"><ul><li><a href="index.html">Início</a></li><li><a href="produtos.html" class="ativo">Produtos</a></li><li><a href="sobre.html">Sobre nós</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+      <div class="acoes">
+        <button class="btn-texto" id="btn-musica-toggle">Ouvir música</button>
+        <button class="btn-carrinho" id="btn-abrir-carrinho">Carrinho <span class="badge-carrinho" id="badge-carrinho-qtd">0</span></button>
+        <button class="hamburger" id="btn-hamburguer" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="carrinho-overlay" id="carrinho-overlay"></div>
+  <aside class="modal-carrinho" id="modal-carrinho" aria-label="Carrinho">
+    <div class="carrinho-header">
+      <h2>Seu carrinho</h2>
+      <button class="btn-fechar-carrinho" id="btn-fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+    </div>
+    <div class="carrinho-corpo" id="carrinho-itens-container"></div>
+    <div class="carrinho-footer">
+      <div class="carrinho-total-linha"><span>Total</span><span id="carrinho-valor-total">R$ 0,00</span></div>
+      <button class="btn" onclick="alert('Obrigado! Este é um pedido de demonstração.')">Finalizar pedido</button>
+    </div>
+  </aside>
+
+  <main>
+ <section class="wrap">
+      <div class="pagina-topo">
+        <h1 class="pagina-titulo">Produtos</h1>
+        <p>Árvores, enfeites, luzes, pelúcias e decoração. Use a busca ou os filtros para achar o que falta na sua casa.</p>
+      </div>
+      <div class="filtros">
+        <input type="text" id="input-busca" placeholder="Buscar por nome ou descrição" aria-label="Buscar produtos">
+        <select id="select-categoria" aria-label="Categoria">
+          <option value="todas">Todas as categorias</option>
+          <option value="arvores">Árvores</option>
+          <option value="enfeites">Enfeites e bolas</option>
+          <option value="iluminacao">Iluminação</option>
+          <option value="pelucias">Pelúcias e bonecos</option>
+          <option value="decoracao">Decoração da casa</option>
+        </select>
+        <select id="select-ordenacao" aria-label="Ordenar">
+          <option value="padrao">Relevância</option>
+          <option value="menor-preco">Menor preço</option>
+          <option value="maior-preco">Maior preço</option>
+          <option value="nome">Nome (A-Z)</option>
+        </select>
+        <div class="contador" id="contador-produtos"></div>
+      </div>
+      <div class="grid-produtos" id="grid-produtos-catalogo"></div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-in">
+      <div>
+        <h3>Encanto de Natal</h3>
+        <p>Árvores, luzes e enfeites para montar o Natal da sua casa.</p>
+      </div>
+      <div>
+        <h3>Páginas</h3>
+        <ul><li><a href="index.html">Início</a></li><li><a href="produtos.html">Produtos</a></li><li><a href="sobre.html">Sobre nós</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="contato.html">Contato</a></li></ul>
+      </div>
+      <div>
+        <h3>Categorias</h3>
+        <ul>
+          <li><a href="produtos.html?categoria=arvores">Árvores</a></li>
+          <li><a href="produtos.html?categoria=enfeites">Enfeites e bolas</a></li>
+          <li><a href="produtos.html?categoria=iluminacao">Iluminação</a></li>
+          <li><a href="produtos.html?categoria=pelucias">Pelúcias e bonecos</a></li>
+          <li><a href="produtos.html?categoria=decoracao">Decoração da casa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <p>Av. Natalina, 1250 - Centro</p>
+        <p>(19) 99893-8120</p>
+        <p>gustavo.scena@eaportal.org</p>
+        <p>Segunda a sábado, das 8h às 20h</p>
+      </div>
+    </div>
+    <div class="rodape-fim">&copy; 2026 Encanto de Natal. Projeto da AV2 de Desenvolvimento Web, Colégio UNASP Prof. Samuel Elias.</div>
+  </footer>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
