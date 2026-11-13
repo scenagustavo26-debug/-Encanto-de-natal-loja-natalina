@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Encanto de Natal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-in">
+      <a href="index.html" class="marca">Encanto <b>de Natal</b></a>
+      <nav class="menu" id="nav-menu" aria-label="Principal"><ul><li><a href="index.html">Início</a></li><li><a href="produtos.html">Produtos</a></li><li><a href="sobre.html">Sobre nós</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="contato.html" class="ativo">Contato</a></li></ul></nav>
+      <div class="acoes">
+        <button class="btn-texto" id="btn-musica-toggle">Ouvir música</button>
+        <button class="btn-carrinho" id="btn-abrir-carrinho">Carrinho <span class="badge-carrinho" id="badge-carrinho-qtd">0</span></button>
+        <button class="hamburger" id="btn-hamburguer" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="carrinho-overlay" id="carrinho-overlay"></div>
+  <aside class="modal-carrinho" id="modal-carrinho" aria-label="Carrinho">
+    <div class="carrinho-header">
+      <h2>Seu carrinho</h2>
+      <button class="btn-fechar-carrinho" id="btn-fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+    </div>
+    <div class="carrinho-corpo" id="carrinho-itens-container"></div>
+    <div class="carrinho-footer">
+      <div class="carrinho-total-linha"><span>Total</span><span id="carrinho-valor-total">R$ 0,00</span></div>
+      <button class="btn" onclick="alert('Obrigado! Este é um pedido de demonstração.')">Finalizar pedido</button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="wrap">
+      <div class="pagina-topo">
+        <h1 class="pagina-titulo">Fale conosco</h1>
+        <p>Dúvidas sobre entrega, sugestões ou pedidos personalizados? Escreva para a gente.</p>
+      </div>
+      <div class="contato">
+        <dl>
+          <div><dt>Endereço da loja</dt><dd>Av. Natalina, 1250 - Centro<br>CEP 13180-000</dd></div>
+          <div><dt>Telefone e WhatsApp</dt><dd>(19) 99893-8120</dd></div>
+          <div><dt>E-mail</dt><dd>gustavo.scena@eaportal.org</dd></div>
+          <div><dt>Horário</dt><dd>Segunda a sábado, das 8h às 20h. Em dezembro, atendemos até o dia 24.</dd></div>
+        </dl>
+        <form id="form-contato" novalidate>
+          <div class="form-grupo"><label for="input-nome" class="form-label">Nome completo</label><input type="text" id="input-nome" class="form-input" placeholder="Maria Silva"><span class="msg-erro" id="erro-nome"></span></div>
+          <div class="form-grupo"><label for="input-email" class="form-label">E-mail</label><input type="email" id="input-email" class="form-input" placeholder="maria@email.com"><span class="msg-erro" id="erro-email"></span></div>
+          <div class="form-grupo"><label for="input-assunto" class="form-label">Assunto</label><input type="text" id="input-assunto" class="form-input" placeholder="Dúvida sobre a Árvore Pinheiro Imperial"><span class="msg-erro" id="erro-assunto"></span></div>
+          <div class="form-grupo"><label for="input-mensagem" class="form-label">Mensagem</label><textarea id="input-mensagem" class="form-textarea" rows="5"></textarea><span class="msg-erro" id="erro-mensagem"></span></div>
+          <button type="submit" class="btn">Enviar mensagem</button>
+          <div id="feedback-envio" class="mensagem-feedback" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-in">
+      <div>
+        <h3>Encanto de Natal</h3>
+        <p>Árvores, luzes e enfeites para montar o Natal da sua casa.</p>
+      </div>
+      <div>
+        <h3>Páginas</h3>
+        <ul><li><a href="index.html">Início</a></li><li><a href="produtos.html">Produtos</a></li><li><a href="sobre.html">Sobre nós</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="contato.html">Contato</a></li></ul>
+      </div>
+      <div>
+        <h3>Categorias</h3>
+        <ul>
+          <li><a href="produtos.html?categoria=arvores">Árvores</a></li>
+          <li><a href="produtos.html?categoria=enfeites">Enfeites e bolas</a></li>
+          <li><a href="produtos.html?categoria=iluminacao">Iluminação</a></li>
+          <li><a href="produtos.html?categoria=pelucias">Pelúcias e bonecos</a></li>
+          <li><a href="produtos.html?categoria=decoracao">Decoração da casa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <p>Av. Natalina, 1250 - Centro</p>
+        <p>(19) 99893-8120</p>
+        <p>gustavo.scena@eaportal.org</p>
+        <p>Segunda a sábado, das 8h às 20h</p>
+      </div>
+    </div>
+    <div class="rodape-fim">&copy; 2026 Encanto de Natal. Projeto da AV2 de Desenvolvimento Web, Colégio UNASP Prof. Samuel Elias.</div>
+  </footer>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>
